@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaMaa'S Collection | Luxury Fashion & Lifestyle</title>
+  <meta name="description" content="Discover refined Indian ethnic wear, contemporary western silhouettes, handcrafted jewellery, and luxury lifestyle accessories at SaMaa'S Collection.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/placeholder.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo-text">SaMaa'S <span>Collection</span></span>
+        <span class="brand-logo-tagline">Haute Couture &amp; Lifestyle</span>
+      </a>
+
+      <!-- Desktop & Mobile Nav Links -->
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="products.html" class="nav-link">Shop Catalog</a>
+        <a href="products.html?category=Ethnic+Wear" class="nav-link">Ethnic Wear</a>
+        <a href="products.html?category=Western+Wear" class="nav-link">Western Wear</a>
+        <a href="products.html?category=Handbags" class="nav-link">Handbags</a>
+        <a href="products.html?category=Jewellery" class="nav-link">Jewellery</a>
+      </nav>
+
+      <!-- Action Icons -->
+      <div class="nav-actions">
+        <!-- Search Quick Link -->
+        <a href="products.html" class="nav-action-btn" title="Search Products" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+
+        <!-- Cart Button with Counter -->
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge-count" id="cartBadge" style="display: none;">0</span>
+        </a>
+
+        <!-- User Authentication Dynamic Slot -->
+        <div id="navAuthContainer"></div>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>🌹</span> Dusty Rose &amp; Burgundy Edition 2026
+          </div>
+          <h1 class="hero-title">
+            Elegance Woven with <em>Warmth &amp; Distinction</em>
+          </h1>
+          <p class="hero-description">
+            Fashionable · Warm · Distinctive couture from Kolhapur, Maharashtra. Explore an opulent curation of dusty rose Anarkalis, rich burgundy Banarasi silks, chic satins, and artisanal Kolhapuri lifestyle essentials.
+          </p>
+          <div class="hero-buttons">
+            <a href="products.html" class="btn btn-primary btn-lg">
+              Explore Collection
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="products.html?sort=newest" class="btn btn-secondary btn-lg">New Arrivals</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80" 
+                 alt="SaMaa'S Collection Dusty Rose Fashion Hero" 
+                 onerror="App.handleImageError(this)">
+          </div>
+          <div class="hero-floating-card">
+            <div class="hero-floating-icon">🌹</div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem; color: var(--color-text-main);">Dusty Rose &amp; Burgundy</div>
+              <div style="font-size: 0.8rem; color: var(--color-text-muted);">Kolhapur, Maharashtra</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Highlights Bar -->
+    <section style="background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 2.5rem 0;">
+      <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; text-align: center;">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🚚</div>
+          <div style="font-weight: 600; color: var(--color-text-main);">Complimentary Shipping</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">On all domestic orders over ₹999</div>
+        </div>
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">💵</div>
+          <div style="font-weight: 600; color: var(--color-text-main);">Cash on Delivery</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Pay securely upon parcel arrival</div>
+        </div>
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">💎</div>
+          <div style="font-weight: 600; color: var(--color-text-main);">Ethical Luxury</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Sourced from authentic heritage weavers</div>
+        </div>
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">✨</div>
+          <div style="font-weight: 600; color: var(--color-text-main);">Premium Finishes</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-muted);">Inspected with highest quality standards</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Showcase -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">Curated Departments</div>
+          <h2 class="section-title">Shop by Category</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Browse through our signature fashion edits tailored for weddings, celebrations, and timeless everyday glamour.</p>
+        </div>
+
+        <div class="category-grid">
+          <a href="products.html?category=Ethnic+Wear" class="category-card">
+            <div class="category-icon">🥻</div>
+            <div class="category-name">Ethnic Wear</div>
+            <span class="badge badge-sage">10 Items &bull; From ₹699</span>
+          </a>
+
+          <a href="products.html?category=Western+Wear" class="category-card">
+            <div class="category-icon">👗</div>
+            <div class="category-name">Western Wear</div>
+            <span class="badge badge-sage">10 Items &bull; From ₹499</span>
+          </a>
+
+          <a href="products.html?category=Handbags" class="category-card">
+            <div class="category-icon">👜</div>
+            <div class="category-name">Handbags</div>
+            <span class="badge badge-gold">10 Items &bull; From ₹299</span>
+          </a>
+
+          <a href="products.html?category=Jewellery" class="category-card">
+            <div class="category-icon">💍</div>
+            <div class="category-name">Jewellery</div>
+            <span class="badge badge-sage">10 Items &bull; From ₹249</span>
+          </a>
+
+          <a href="products.html?category=Footwear" class="category-card">
+            <div class="category-icon">👡</div>
+            <div class="category-name">Footwear</div>
+            <span class="badge badge-gold">10 Items &bull; From ₹599</span>
+          </a>
+
+          <a href="products.html?category=Accessories" class="category-card">
+            <div class="category-icon">🧣</div>
+            <div class="category-name">Accessories</div>
+            <span class="badge badge-sage">10 Items &bull; From ₹199</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Spotlight Collection -->
+    <section class="section" style="background: var(--color-surface-soft);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">Editor's Choice</div>
+          <h2 class="section-title">Featured Highlights</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Handpicked statement pieces from our premier artisan ateliers.</p>
+        </div>
+
+        <div class="product-grid" id="featuredGrid">
+          <!-- Populated by JavaScript -->
+          <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+            Loading featured highlights...
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="products.html" class="btn btn-outline btn-lg">View Complete Catalog (60 Items)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers / New Arrivals Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-subtitle">Trending Now</div>
+          <h2 class="section-title">Trending &amp; Best Sellers</h2>
+          <div class="section-divider"></div>
+          <p class="section-desc">Our most loved garments and accessories, cherished by our patrons.</p>
+        </div>
+
+        <div class="product-grid" id="trendingGrid">
+          <!-- Populated by JavaScript -->
+          <div style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+            Loading trending items...
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Banner -->
+    <section class="section" style="background: linear-gradient(135deg, #F5E6E8 0%, #FAF7F5 100%); border-top: 1px solid var(--color-border);">
+      <div class="container" style="max-width: 800px; text-align: center;">
+        <span class="badge badge-rose" style="margin-bottom: 1rem;">The Dusty Rose &amp; Burgundy Story</span>
+        <h2 style="margin-bottom: 1.25rem;">Fashionable · Warm · Distinctive</h2>
+        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--color-text-body); margin-bottom: 2rem;">
+          Rooted in the royal artistic heritage of <strong>Kolhapur, Maharashtra</strong>, SaMaa'S Collection harmonizes romantic dusty roses with the regal depth of deep burgundy. Crafted with warmth and distinctive allure to bring high-fashion luxury to your everyday wardrobe at welcoming prices.
+        </p>
+        <a href="products.html" class="btn btn-primary">Explore All 60 Pieces</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 1.25rem;">
+            <span class="brand-logo-text" style="color: #FFFFFF;">SaMaa'S <span style="color: var(--color-primary-light);">Collection</span></span>
+            <span class="brand-logo-tagline" style="color: var(--color-accent);">Haute Couture &amp; Lifestyle</span>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.7; color: #A89C94; margin-bottom: 1.25rem;">
+            An exquisite destination for curated bridal wear, contemporary ready-to-wear, and handcrafted lifestyle essentials.
+          </p>
+          <div style="font-size: 0.88rem; color: #D2C7BF;">
+            <div>📍 Kolhapur, Maharashtra, India</div>
+            <div>📞 +91 98765 43210</div>
+            <div>✉️ care@samaascollection.com</div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html?category=Ethnic+Wear">Ethnic Wear</a></li>
+            <li><a href="products.html?category=Western+Wear">Western Wear</a></li>
+            <li><a href="products.html?category=Handbags">Handbags &amp; Totes</a></li>
+            <li><a href="products.html?category=Jewellery">Artisan Jewellery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <li><a href="orders.html">Track Order</a></li>
+            <li><a href="login.html">Sign In / Register</a></li>
+            <li><a href="#!">Shipping &amp; Delivery</a></li>
+            <li><a href="#!">Returns &amp; Exchanges</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Exclusive Newsletter</h4>
+          <p style="font-size: 0.88rem; color: #A89C94; margin-bottom: 1rem;">
+            Receive invitations to private sales and premier trunk shows.
+          </p>
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="email" placeholder="Enter your email" class="form-input" style="font-size: 0.85rem; padding: 0.6rem 0.8rem; background: #2E2824; border-color: #4A403A; color: #FFF;">
+            <button class="btn btn-primary btn-sm" onclick="App.showToast('Thank you for subscribing to SaMaa\'S VIP club!', 'success')">Join</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SaMaa'S Collection. All rights reserved. Built for internship project demonstration.</div>
+        <div>Cash on Delivery &bull; Safe &amp; Secure &bull; Authentic Quality</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    // Home Page Loader
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        // 1. Fetch Featured Products
+        const featRes = await fetch('/api/products?featured=1&limit=4');
+        const featData = await featRes.json();
+        const featContainer = document.getElementById('featuredGrid');
+        if (featData.success && featData.products.length > 0) {
+          featContainer.innerHTML = featData.products.map(renderProductCard).join('');
+        } else {
+          featContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">No featured items available.</p>';
+        }
+
+        // 2. Fetch Trending / Best Sellers
+        const trendRes = await fetch('/api/products?limit=8');
+        const trendData = await trendRes.json();
+        const trendContainer = document.getElementById('trendingGrid');
+        if (trendData.success && trendData.products.length > 0) {
+          trendContainer.innerHTML = trendData.products.map(renderProductCard).join('');
+        } else {
+          trendContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Catalog is updating.</p>';
+        }
+      } catch (e) {
+        console.warn('Home page data load warning:', e.message);
+      }
+    });
+
+    function renderProductCard(p) {
+      const inStock = p.stock_quantity > 0;
+      const stockBadge = inStock
+        ? `<span class="product-stock in-stock">In Stock (${p.stock_quantity})</span>`
+        : `<span class="product-stock out-of-stock">Out of Stock</span>`;
+
+      return `
+        <article class="product-card">
+          <div class="product-media">
+            <a href="product-details.html?id=${p.id}">
+              <img src="${p.image_url}" alt="${App.escapeHtml(p.name)}" onerror="App.handleImageError(this)">
+            </a>
+            <div class="product-badges">
+              ${p.is_featured ? '<span class="badge badge-blush">Featured</span>' : ''}
+            </div>
+          </div>
+          <div class="product-body">
+            <div class="product-meta">
+              <span class="product-category">${App.escapeHtml(p.category)}</span>
+              <span class="product-rating">★ ${p.rating || '4.8'}</span>
+            </div>
+            <h3 class="product-name">
+              <a href="product-details.html?id=${p.id}">${App.escapeHtml(p.name)}</a>
+            </h3>
+            <div class="product-price-row">
+              <span class="product-price">${App.formatINR(p.price)}</span>
+              ${stockBadge}
+            </div>
+          </div>
+          <div class="product-actions">
+            <button class="btn btn-primary btn-block btn-sm" 
+                    ${!inStock ? 'disabled' : ''}
+                    onclick="quickAddToCart(${p.id}, '${App.escapeHtml(p.name.replace(/'/g, "\\'"))}', ${p.price}, '${p.image_url}', ${p.stock_quantity})">
+              ${inStock ? 'Add to Cart' : 'Out of Stock'}
+            </button>
+          </div>
+        </article>
+      `;
+    }
+
+    async function quickAddToCart(id, name, price, img, stock) {
+      const user = await App.getUser();
+      if (user) {
+        // Authenticated add to database
+        try {
+          const res = await fetch('/api/cart/add', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-Token': App.getCsrfToken() || ''
+            },
+            body: JSON.stringify({ productId: id, quantity: 1 })
+          });
+          const data = await res.json();
+          if (data.success) {
+            App.showToast(`"${name}" added to cart!`, 'success');
+            await App.updateCartBadge();
+          } else {
+            App.showToast(data.message, 'error');
+          }
+        } catch (e) {
+          App.showToast('Could not add to cart.', 'error');
+        }
+      } else {
+        // Guest cart in localStorage
+        const guestCart = App.getGuestCart();
+        const existing = guestCart.find(item => item.productId === id);
+        if (existing) {
+          if (existing.quantity >= stock) {
+            App.showToast(`Only ${stock} items available in stock.`, 'warning');
+            return;
+          }
+          existing.quantity += 1;
+        } else {
+          guestCart.push({
+            productId: id,
+            name: name,
+            price: price,
+            image_url: img,
+            stock_quantity: stock,
+            quantity: 1
+          });
+        }
+        App.setGuestCart(guestCart);
+        App.showToast(`"${name}" added to cart!`, 'success');
+        await App.updateCartBadge();
+      }
+    }
+  </script>
+</body>
+</html>

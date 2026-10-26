@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | SaMaa'S Collection</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/placeholder.svg">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo-text">SaMaa'S <span>Collection</span></span>
+        <span class="brand-logo-tagline">Haute Couture &amp; Lifestyle</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Shop Catalog</a>
+        <a href="products.html?category=Ethnic+Wear" class="nav-link">Ethnic Wear</a>
+        <a href="products.html?category=Western+Wear" class="nav-link">Western Wear</a>
+        <a href="products.html?category=Handbags" class="nav-link">Handbags</a>
+        <a href="products.html?category=Jewellery" class="nav-link">Jewellery</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="products.html" class="nav-action-btn" title="Search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge-count" id="cartBadge" style="display: none;">0</span>
+        </a>
+
+        <div id="navAuthContainer"></div>
+
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav style="margin-bottom: 2rem; font-size: 0.88rem; color: var(--color-text-muted);">
+        <a href="index.html">Home</a> &nbsp;/&nbsp;
+        <a href="products.html">Catalog</a> &nbsp;/&nbsp;
+        <span id="breadcrumbCategory">Category</span> &nbsp;/&nbsp;
+        <span id="breadcrumbProduct" style="color: var(--color-text-main); font-weight: 600;">Product</span>
+      </nav>
+
+      <!-- Main Product Details Container -->
+      <div id="productDetailsWrapper">
+        <div style="text-align: center; padding: 5rem 0;">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">🌸</div>
+          <h2>Loading Product Details...</h2>
+        </div>
+      </div>
+
+      <!-- Related Products Section -->
+      <section class="section" style="margin-top: 4rem; border-top: 1px solid var(--color-border); padding-top: 3.5rem;">
+        <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+          <div class="section-subtitle">Complete The Look</div>
+          <h2 class="section-title">You May Also Admire</h2>
+        </div>
+        <div class="product-grid" id="relatedGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; justify-content: center; text-align: center;">
+        &copy; 2026 SaMaa'S Collection. All rights reserved. Premium Fashion &amp; Lifestyle.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/product-details.js"></script>
+</body>
+</html>

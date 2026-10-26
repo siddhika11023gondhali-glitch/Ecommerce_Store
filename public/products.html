@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Luxury Catalog | SaMaa'S Collection</title>
+  <meta name="description" content="Browse our luxury fashion catalog including ethnic anarkalis, banarasi sarees, evening gowns, handbags, and artisan jewellery.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/placeholder.svg">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo-text">SaMaa'S <span>Collection</span></span>
+        <span class="brand-logo-tagline">Haute Couture &amp; Lifestyle</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Shop Catalog</a>
+        <a href="products.html?category=Ethnic+Wear" class="nav-link">Ethnic Wear</a>
+        <a href="products.html?category=Western+Wear" class="nav-link">Western Wear</a>
+        <a href="products.html?category=Handbags" class="nav-link">Handbags</a>
+        <a href="products.html?category=Jewellery" class="nav-link">Jewellery</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge-count" id="cartBadge" style="display: none;">0</span>
+        </a>
+
+        <div id="navAuthContainer"></div>
+
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <!-- Page Header -->
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <div class="section-subtitle">Exclusive Catalog</div>
+        <h1 class="section-title">The SaMaa'S Collection</h1>
+        <div class="section-divider"></div>
+        <p class="section-desc">Handcrafted elegance and contemporary silhouettes for the modern connoisseur.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-pills" id="categoryPills">
+        <button class="category-pill active" data-category="All">All Categories</button>
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Search & Sorting Filter Bar -->
+      <div class="catalog-toolbar">
+        <div class="search-box-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search by product name, fabric, or style...">
+        </div>
+
+        <div class="filter-group">
+          <label for="sortSelect" style="font-size: 0.88rem; font-weight: 600; color: var(--color-text-main);">Sort By:</label>
+          <select id="sortSelect" class="form-select" style="width: auto; padding: 0.6rem 2rem 0.6rem 1rem;">
+            <option value="featured">Featured &amp; Recommended</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="newest">Newest Arrivals</option>
+            <option value="name_asc">Name: A to Z</option>
+          </select>
+
+          <button id="resetFiltersBtn" class="btn btn-secondary btn-sm" title="Clear all filters">
+            Reset Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Count Label -->
+      <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <div id="productCountLabel" style="font-size: 0.9rem; color: var(--color-text-muted);">
+          Loading catalog...
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid" id="productsGrid">
+        <!-- Rendered dynamically by js/products.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; justify-content: center; text-align: center;">
+        &copy; 2026 SaMaa'S Collection. All rights reserved. Premium Fashion &amp; Lifestyle.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

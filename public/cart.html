@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart | SaMaa'S Collection</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="images/placeholder.svg">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo-text">SaMaa'S <span>Collection</span></span>
+        <span class="brand-logo-tagline">Haute Couture &amp; Lifestyle</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Shop Catalog</a>
+        <a href="products.html?category=Ethnic+Wear" class="nav-link">Ethnic Wear</a>
+        <a href="products.html?category=Western+Wear" class="nav-link">Western Wear</a>
+        <a href="products.html?category=Handbags" class="nav-link">Handbags</a>
+        <a href="products.html?category=Jewellery" class="nav-link">Jewellery</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="products.html" class="nav-action-btn" title="Search" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+
+        <a href="cart.html" class="nav-action-btn" title="Shopping Cart" aria-label="Cart" style="border-color: var(--color-primary); color: var(--color-primary);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge-count" id="cartBadge" style="display: none;">0</span>
+        </a>
+
+        <div id="navAuthContainer"></div>
+
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2.5rem; text-align: left;">
+        <div class="section-subtitle">Your Bag</div>
+        <h1 class="section-title">Shopping Cart</h1>
+      </div>
+
+      <!-- Guest Login Alert Notice -->
+      <div id="guestLoginNotice" style="display: none; background: #FFF9E6; border: 1px solid #FFE29A; padding: 1rem 1.25rem; border-radius: var(--radius-md); margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+        <div>
+          <strong>Shopping as a guest?</strong> Please <a href="login.html?redirect=cart.html" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">log in or create an account</a> to save your bag and proceed to checkout.
+        </div>
+        <a href="login.html?redirect=cart.html" class="btn btn-secondary btn-sm">Log In Now</a>
+      </div>
+
+      <!-- Main Cart Layout -->
+      <div id="cartContentContainer">
+        <!-- Rendered dynamically by js/cart.js -->
+        <div style="text-align: center; padding: 4rem 0;">
+          <div style="font-size: 2rem; margin-bottom: 1rem;">🛍️</div>
+          <h2>Loading your shopping cart...</h2>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0; justify-content: center; text-align: center;">
+        &copy; 2026 SaMaa'S Collection. All rights reserved. Premium Fashion &amp; Lifestyle.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
